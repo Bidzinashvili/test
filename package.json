@@ -4,9 +4,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon app.js",
-    "start": "./node_modules/.bin/netlify-lambda serve src",
-    "build": "./node_modules/.bin/netlify-lambda build src"
+    "dev": "nodemon app.js"
   },
   "keywords": [],
   "author": "",
@@ -17,8 +15,6 @@
     "body-parser": "^1.20.3",
     "express": "^4.21.0",
     "mongoose": "^8.7.0",
-    "netlify-lambda": "^2.0.16",
-    "nodemon": "^3.1.7",
-    "serverless-http": "^3.2.0"
+    "nodemon": "^3.1.7"
   }
 }

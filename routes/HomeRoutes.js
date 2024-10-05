@@ -3,9 +3,7 @@ import bcrypt from "bcrypt"
 const router = express.Router()
 
 router.get('/', (req, res) => {
-    if (req.body === undefined) {
-        res.json({ "Response": "Bye" })
-    }
+    res.send("Hello")
 })
 
 let users = []

@@ -1,19 +1,17 @@
 import jwt from "jsonwebtoken"
 
 export const requireAuth = (req, res, next) => {
-    try {
-        const token = req.headers['Authorization'].split(' ')[1]
-        jwt.verify(token, process.env.JWT_SECRET, (err, ans) => {
+    const token = req.headers.authorization?.split(' ')[1];
+
+    if (!token) {
+        res.json('You need to log in first!')
+    } else {
+        jwt.verify(token, process.env.JWT_SECRET, (err) => {
             if (err) {
-                res.json(err)
-                // res.json("You need to log in first")
+                res.json('You need to log in first!')
+            } else {
+                next()
             }
-            next()
         })
-
-    } catch (err) {
-        res.json(err)
     }
-    // res.json(token)
-
 }

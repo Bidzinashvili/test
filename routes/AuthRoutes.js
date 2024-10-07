@@ -11,6 +11,7 @@ const validationSchema = Joi.object({
 })
 
 import AuthModel from "../models/AuthModel.js"
+import { requireAuth } from "../middleware/AuthMiddleware.js"
 router.post('/register', async (req, res) => {
     const { email, password } = req.body
 
@@ -59,6 +60,14 @@ router.post('/login', (req, res) => {
         .catch((err) => {
             res.json(err)
         })
+})
+
+router.post('/logout', requireAuth, (req, res) => {
+    const token = req.headers.authorization?.split(' ')[1]
+    const _id = jwt.verify(token, process.env.JWT_SECRET)
+    const newToken = jwt.sign({ _id: _id }, process.env.JWT_SECRET, { expiresIn: '1s' });
+
+    res.json(newToken)
 })
 
 export default router;

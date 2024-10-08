@@ -17,6 +17,9 @@ app.use('/', HomeRoutes)
 import AuthRoutes from './routes/AuthRoutes.js'
 app.use('/auth', AuthRoutes)
 
+import ProductRoutes from "./routes/ProductRoutes.js"
+app.use('/products', ProductRoutes)
+
 mongoose.connect(process.env.DB_URI)
   .then(() => {
     app.listen(port, () => {

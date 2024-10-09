@@ -29,4 +29,16 @@ router.post('/create', requireAuth, async (req, res) => {
 
 })
 
+router.get("/:id", (req, res) => {
+    const { id } = req.params
+
+    ProductModel.findById(id)
+        .then((product) => {
+            res.status(200).json(product)
+        })
+        .catch((err) => {
+            res.status(400).json("Product not found!")
+        })
+})
+
 export default router;

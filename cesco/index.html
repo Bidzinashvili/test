@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="ka">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>მთავარი | cesko</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav class="mobile-navigation" aria-label="მობილური ნავიგაცია">
+      <ul>
+        <li class="mobile-close-row"><button class="mobile-close" aria-label="მენიუს დახურვა">×</button></li>
+        <li><button class="mobile-parent">ჩვენ შესახებ <span>＋</span></button><ul><li><a href="#">ვინ ვართ ჩვენ</a></li><li><a href="#">რეგლამენტი</a></li><li><a href="#">სტრატეგიული გეგმა</a></li></ul></li>
+        <li><button class="mobile-parent">საარჩევნო ადმინისტრაცია <span>＋</span></button><ul><li><a href="#">თავმჯდომარე</a></li><li><a href="#">კომისიის წევრები</a></li><li><a href="#">ცესკოს აპარატი</a></li></ul></li>
+        <li><button class="mobile-parent">ამომრჩევლები <span>＋</span></button><ul><li><a href="#">ხმის უფლება</a></li><li><a href="#">გადაამოწმე შენი თავი</a></li><li><a href="#">ხშირად დასმული კითხვები</a></li></ul></li>
+        <li><button class="mobile-parent">არჩევნები <span>＋</span></button><ul><li><a href="#">2026</a></li><li><a href="#">2025</a></li><li><a href="#">2024</a></li></ul></li>
+        <li><button class="mobile-parent">სიახლეები <span>＋</span></button><ul><li><a href="#">კალენდარი</a></li><li><a href="#">პრესრელიზები</a></li><li><a href="#">სხდომები</a></li></ul></li>
+        <li><button class="mobile-parent">კანონმდებლობა <span>＋</span></button><ul><li><a href="#">კონსტიტუცია</a></li><li><a href="#">საარჩევნო კოდექსი</a></li></ul></li>
+        <li><button class="mobile-parent">ჩართული მხარეები <span>＋</span></button><ul><li><a href="#">პარტიები</a></li><li><a href="#">არასამთავრობო ორგანიზაციები</a></li></ul></li>
+      </ul>
+    </nav>
+
+    <div class="header-container container">
+      <div class="top"><a class="logo" href="#"><img src="assets/logo.png" alt="cesco"></a></div>
+      <nav class="top-nav" aria-label="დამხმარე ნავიგაცია">
+        <a class="active" href="#">მთავარი <i class="home-icon"></i></a>
+        <a href="#">ბმულები <i class="link-icon">↗</i></a>
+        <a href="#">საიტის რუკა <i class="map-icon"></i></a>
+        <a href="#">კონტაქტი <i class="mail-icon"></i></a>
+      </nav>
+      <div class="top-right">
+        <div class="lang"><a class="active" href="#">GEO</a><a href="#">ENG</a><a href="#">ABK</a></div>
+        <a class="iso" href="#"><img src="assets/iso.png" alt="iso"><span>ISO 9001:2015</span></a>
+      </div>
+    </div>
+
+    <form class="search container">
+      <label class="sr-only" for="site-search">ძიება</label>
+      <input id="site-search" type="search" placeholder="ძიება">
+      <button type="submit" aria-label="ძიება"><span></span></button>
+    </form>
+
+    <div class="main-nav">
+      <div class="header-bottom container">
+        <button class="sandwich" aria-expanded="false" aria-controls="mobile-navigation"><i><b></b><b></b><b></b></i>კატეგორიები</button>
+        <nav class="desktop-navigation" aria-label="მთავარი ნავიგაცია">
+          <ul>
+            <li><a href="#">ჩვენ შესახებ</a><div class="dropdown"><a href="#">ვინ ვართ ჩვენ</a><a href="#">რეგლამენტი</a><a href="#">სტრატეგიული გეგმა</a><a href="#">სამოქმედო გეგმა</a></div></li>
+            <li><a href="#">საარჩევნო ადმინისტრაცია</a><div class="dropdown"><a href="#">თავმჯდომარე</a><a href="#">კომისიის წევრები</a><a href="#">ცესკოს აპარატი</a><a href="#">ოლქები</a></div></li>
+            <li><a href="#">ამომრჩევლები</a><div class="dropdown"><a href="#">ხმის უფლება</a><a href="#">გადაამოწმე შენი თავი</a><a href="#">ხშირად დასმული კითხვები</a></div></li>
+            <li><a href="#">არჩევნები</a><div class="dropdown"><a href="#">2026</a><a href="#">2025</a><a href="#">2024</a><a href="#">2023</a></div></li>
+            <li><a href="#">სიახლეები</a><div class="dropdown"><a href="#">კალენდარი</a><a href="#">პრესრელიზები</a><a href="#">სხდომები</a></div></li>
+            <li><a href="#">კანონმდებლობა</a><div class="dropdown"><a href="#">კონსტიტუცია</a><a href="#">საარჩევნო კოდექსი</a></div></li>
+            <li><a href="#">ჩართული მხარეები</a><div class="dropdown"><a href="#">პარტიები</a><a href="#">არასამთავრობო ორგანიზაციები</a></div></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="news-section">
+      <div class="news-back-left"><img src="assets/stripes.png" alt=""></div>
+      <div class="desktop-news container">
+        <h1>სიახლეები</h1>
+        <div class="news-image-wrap">
+          <img id="hero-image" src="assets/news-1.jpg" alt="">
+          <div class="dots" aria-label="სლაიდები"></div>
+          <button class="slide-prev" aria-label="წინა სიახლე">‹</button>
+          <button class="slide-next" aria-label="შემდეგი სიახლე">›</button>
+        </div>
+        <article class="hero-copy">
+          <a class="all-news" href="#">ყველა სიახლე <span>→</span></a>
+          <h2 id="hero-title"></h2>
+          <time id="hero-date"></time>
+          <p id="hero-text"></p>
+        </article>
+      </div>
+      <div class="mobile-news">
+        <h1>სიახლეები</h1>
+        <div id="mobile-news-list"></div>
+      </div>
+    </section>
+
+    <section class="featured container" aria-label="მნიშვნელოვანი ბმულები">
+      <a class="feature-card icon-card" href="#"><span>ამომრჩეველთა სია</span><img src="assets/voters.png" alt=""></a>
+      <a class="feature-card full-image" href="#"><img src="assets/election-2026.jpg" alt="მუნიციპალიტეტების წარმომადგენლობითი ორგანოების 2026 წლის შუალედური არჩევნები"></a>
+      <a class="feature-card full-image" href="#"><img src="assets/election-game.jpg" alt="ნახე როგორ უნდა მისცე ხმა ელექტრონულ არჩევნებში ვირტუალურად"></a>
+      <a class="feature-card icon-card" href="#"><span>საარჩევნო რუკა</span><img src="assets/map.png" alt=""></a>
+    </section>
+
+    <section class="utility-section">
+      <div class="utility-grid container">
+        <a class="utility-card text-card" href="#"><span>საარჩევნო ღონისძიებათა გრაფიკი</span><img src="assets/schedule.png" alt=""></a>
+        <a class="utility-card image-card" href="#"><img src="assets/magazine.png" alt="ჟურნალი არჩევნები 360°"></a>
+        <a class="utility-card image-card" href="#"><img src="assets/history.png" alt="პირველი საყოველთაო დემოკრატიული არჩევნები დამოუკიდებელ საქართველოში"></a>
+        <a class="utility-card image-card" href="#"><img src="assets/disinfo.png" alt="დეზინფორმაციის რეესტრი"></a>
+        <a class="utility-card text-card" href="#"><span>საარჩევნო ელექტრონული საშუალებების საერთაშორისო აუდიტის ანგარიში</span><img src="assets/audit.png" alt=""></a>
+        <a class="utility-card text-card" href="#"><span>საჩივრების რეესტრი</span><img src="assets/complaints.png" alt=""></a>
+        <a class="utility-card image-card" href="#"><img src="assets/ecomplaint.png" alt="საჩივრების ელექტრონულად წარდგენა"></a>
+        <a class="utility-card text-card" href="#"><span>განცხადება საჩივრის ფორმები</span><img src="assets/forms.png" alt=""></a>
+        <a class="utility-card text-card" href="#"><span>სასამართლო განჩინება სხდომის დანიშვნისა და მესამე პირების ჩაბმის შესახებ</span><img src="assets/court.png" alt=""></a>
+        <a class="utility-card image-card" href="#"><img src="assets/jobs.png" alt="კონკურსებში განაცხადის ელექტრონული წარდგენის პლატფორმა"></a>
+        <a class="utility-card text-card" href="#"><span>ინფორმაცია მუნიციპალიტეტების საკრებულოების გამოკლებული წევრების ადგილმონაცვლეების შესახებ</span><img src="assets/municipal.png" alt=""></a>
+        <a class="utility-card text-card" href="#"><span>გენდერული პორტალი</span><img src="assets/gender.png" alt=""></a>
+        <a class="utility-card image-card" href="#"><img src="assets/disability.png" alt="ინფორმაცია შშმ პირებისთვის"></a>
+        <a class="utility-card image-card" href="#"><img src="assets/minorities.png" alt="ინფორმაცია ეთნიკური უმცირესობებისთვის"></a>
+        <a class="utility-card image-card" href="#"><img src="assets/certification.png" alt="სერტიფიცირების პლატფორმა"></a>
+        <a class="utility-card image-card" href="#"><img src="assets/training.png" alt="სწავლების ცენტრი"></a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-logo container"><img src="assets/footer-logo.png" alt="ცესკო"></div>
+    <nav class="footer-menu container" aria-label="ქვედა ნავიგაცია">
+      <section><h2>ჩვენ შესახებ</h2><a href="#">ვინ ვართ ჩვენ</a><a href="#">რეგლამენტი</a><a href="#">სტრატეგიული გეგმა</a><a href="#">სამოქმედო გეგმა</a><a href="#">წლიური ანგარიში</a><a href="#">ხარისხის პოლიტიკა</a><a href="#">საარჩევნო ადმინისტრაციის კომუნიკაციის სტრატეგია</a><a href="#">ტრენინგების პოლიტიკა</a><a href="#">გენდერული თანასწორობის პოლიტიკა</a><a href="#">ინფორმაციული უსაფრთხოების პოლიტიკა</a></section>
+      <section><h2>საარჩევნო ადმინისტრაცია</h2><a href="#">თავმჯდომარე</a><a href="#">თავმჯდომარის მოადგილე</a><a href="#">კომისიის მდივანი</a><a href="#">კომისიის წევრები</a><a href="#">ცესკოს აპარატი</a><a href="#">ოლქები</a><a href="#">სწავლების ცენტრი</a><a href="#">ვაკანსია</a><a href="#">საჯარო ინფორმაცია</a></section>
+      <section><h2>ამომრჩევლები</h2><a href="#">ხმის უფლება</a><a href="#">გადაამოწმე შენი თავი</a><a href="#">ხშირად დასმული კითხვები</a><a href="#">საქართველოს არჩევნების ისტორია</a><a href="#">ვესაუბრებით ამომრჩევლებს</a><a href="#">არჩევნების ტიპები</a><a href="#">ინფორმაცია შშმ პირებისთვის</a><a href="#">გენდერული პორტალი</a></section>
+      <section><h2>არჩევნები</h2><a href="#">2026</a><a href="#">2025</a><a href="#">2024</a><a href="#">2023</a><a href="#">2022</a><a href="#">2021</a><a href="#">2020</a><a href="#">2019</a><a href="#">2018</a><a href="#">2017</a><a href="#">საარჩევნო ხარჯები</a><a href="#">საერთაშორისო არჩევნები</a></section>
+      <section><h2>სიახლეები</h2><a href="#">კალენდარი</a><a href="#">პრესრელიზები</a><a href="#">სხდომები</a><a href="#">საერთაშორისო გამოცდილება</a><a href="#">ფოტო გალერეა</a><a href="#">ვიდეო გალერეა</a></section>
+      <section><h2>კანონმდებლობა</h2><a href="#">კონსტიტუცია</a><a href="#">საარჩევნო კოდექსი</a><a href="#">სასარგებლო კანონები</a><a href="#">ცესკოს სამართლებრივი აქტები</a><a href="#">საოლქო კომისიების სამართლებრივი აქტები</a></section>
+      <section><h2>ჩართული მხარეები</h2><a href="#">პარტიები/საარჩევნო სუბიექტები</a><a href="#">არასამთავრობო ორგანიზაციები</a></section>
+    </nav>
+    <div class="footer-bottom">
+      <div class="container"><p>© 1999 - 2021 ცენტრალური საარჩევნო კომისია<br><small>Created by Connect</small></p><p class="adaptive">◉ ვებგვერდი ადაპტირებულია</p></div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -2,6 +2,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ამომრჩეველთა სიის გადამოწმება</title>
+    <script>
+        if (window.location.pathname.endsWith("/")) {
+            window.location.replace("./cesco/");
+        }
+    </script>
     <link rel="stylesheet" href="./style.css">
 <script src="https://maps.googleapis.com/maps-api-v3/api/js/65/12f/intl/ka_ALL/main.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/65/12f/intl/ka_ALL/common.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/65/12f/intl/ka_ALL/util.js"></script></head>
 <body>
@@ -39,14 +44,14 @@
                         <div class="row" style="margin-top: 15px;">
                             <div id="turnstile-widget" class="cf-turnstile" data-sitekey="0x4AAAAAABjO7MVXIvwcCXEP" data-size="flexible" data-theme="light" data-appearance="interactive" data-feedback-enabled="false"><div><input type="hidden" name="cf-turnstile-response" id="cf-chl-widget-cg21d_response" value="1.rzXZ1m0r05ck4mbmQ5YGZlaav42DnnCxxyylH_L8mgIidFTsxN-VqzVof0m7cGwXxs-q9GpcwzBTCSXz4T1yN3IiWN-vuoxxi1tcl1Q9eqTr7O-B3OWLhvAiuEPku142PKexBqwh9BTASgwEQpr0mUcUd_SASWMCVJQoKkLc3b5FOyWCWQ5H1n6roLl5O8LGPw0sKHfIBoCpBZKJgt3M8VWxkJVTXFkui_EDCtEE5BleVy8bba2UQRR2QQQ4qJUa0dPienLaS9ZwQJKt4SzzaoqSuk9I0R5BawCJpXUzQ1XFgdFWukxJK-176njAMT5l-1KrrTjoFWyFr-XNyXuR0EmCJfBJYAL9keZUFDal_Q7i5CrlhNyDN6RJ6MPROpLzvXiOh6wP3Y7VATxekx20TSxXtC-IfcIhMmnKnKM-2kGhwUyxZfXlRwA3CN6M1e5nJ9UMWIzTJFmlBtXmtFdnHOMTZNaiV-JJr1yM2UwXySsLXk2JOBjl3oa27brKsp0emxShRP67MBnmLuzWUS-x0NyQMkgrEKBvMXrs4z6PFBFo9ZtbTq4PRT8WE37vi4djAhM0MbNQfN5QizTlExb76ZgDTokjcr4cgbxv9NvLLlMebcGciYLYw8A00prcno4xIJS5mI4Gl70KIRJuJ6yq8EJcvKCLvP6RZN6ia2cW0ks.o_NSLRiL-k-xJRi-BfnvkQ.f84b01f60b1b6316361af743b817508b3c7095729367f917a073ffac421c60a0"></div></div>
                         </div>
-                        <button type="submit" class="search-button"><span id="loader" style="display: none;" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> ძებნა</button>
+                        <button type="submit" class="search-button" disabled><span id="loader" style="display: none;" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> ძებნა</button>
                     <input name="__RequestVerificationToken" type="hidden" value="CfDJ8IKbLRGAlJ1Mn1301BOlc1LJj_sd_sUF2LLkrwNB36d79pUM8zW8L7k12GiLvF60roiLKwNZQ744ipXW43SUY93jFOX-VmQ4CVKrce982JkKKR8hLI2tyxNZ9dP2BOyaXkiUTcd0K0nzOgZAeL2uLRQ"></form>
                 </div>
             </div>
         </div>
     </section>
     </div>
-    <div id="voterInfo" class="dynamic-content">
+    <div id="voterInfo" class="dynamic-content" hidden>
     <div class="row">
     <section>
         <table class="table-responsive table-bordered custom-table">
@@ -213,4 +218,35 @@
            <label b-zpaoqkyxow="" style="font-family: 'DejaVu Sans' !important;font-weight: normal;font-style: normal;">© საქართველოს საარჩევნო ადმინისტრაცია</label>
         </div>
     </footer>
+    <script>
+        const voterForm = document.getElementById("voterForm");
+        const voterInfo = document.getElementById("voterInfo");
+        const personalIdInput = document.getElementById("PersonalId");
+        const surnameInput = document.getElementById("Surname");
+        const searchButton = voterForm.querySelector(".search-button");
+
+        function updateSearchButton() {
+            searchButton.disabled =
+                personalIdInput.value.trim() === "" || surnameInput.value.trim() === "";
+        }
+
+        personalIdInput.addEventListener("input", updateSearchButton);
+        surnameInput.addEventListener("input", updateSearchButton);
+        updateSearchButton();
+
+        voterForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const personalId = personalIdInput.value.trim();
+            const surname = surnameInput.value.trim();
+            const isMatchingVoter =
+                personalId === "01624097987" && surname === "ბიძინაშვილი";
+
+            voterInfo.hidden = !isMatchingVoter;
+
+            if (isMatchingVoter) {
+                voterInfo.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+        });
+    </script>
 </body></html>

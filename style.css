@@ -11758,7 +11758,7 @@ body {
 
 .search-button {
   border-radius: 14px;
-  background-color: rgba(76, 187, 120, 0.62);
+  background-color: #4CBB78;
   margin-top: 15px;
   width: auto;
   max-width: 100%;
@@ -11768,6 +11768,11 @@ body {
   padding: 12px 70px;
   border: none;
   cursor: pointer;
+}
+
+.search-button:disabled {
+  background-color: rgba(76, 187, 120, 0.62);
+  cursor: not-allowed;
 }
 
 .map-button {
@@ -11786,8 +11791,8 @@ body {
 }
 
 
-.search-button:hover {
-  background-color: #4CBB78;
+.search-button:not(:disabled):hover {
+  background-color: #009766;
 }
 
 @media (max-width: 991px) {
